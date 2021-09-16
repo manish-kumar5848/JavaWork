@@ -6,6 +6,9 @@ public class EncapsulationDemo {
         int damage=10;
        player.looseHealth(damage);
       System.out.println( player.getName() + " Health is "+ player.healthRemaining());
+      player.increaseHealth(10);
+      player.increaseHealth(10);
+      System.out.println( player.getName() + " Health is "+ player.healthRemaining());
 }
 }
 
@@ -20,7 +23,9 @@ class  Player {
         this.health = health;
         this.weapon = weapon;
     }
-
+    public void increaseHealth(int booster){
+        this.health= this.health + booster;
+    }
     public void looseHealth(int damage){
         this.health= this.health -damage;
         if(this.health <=0){
