@@ -39,6 +39,9 @@ public class MapDemo {
         map.put(102,"Ravi");
         map.put(101,"Vijay");
         map.put(103,"Rahul");
+        System.out.println(map.putIfAbsent(100,"Amit"));
+        map.putIfAbsent(104,"Awanish");
+        System.out.println(map.entrySet());
         System.out.println(map.ceilingEntry(103));
         System.out.println(map.firstKey());
         System.out.println(map.headMap(102));
