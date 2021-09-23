@@ -54,7 +54,7 @@ class Student {
     public void setId(Integer id) {
         this.id = id;
     }
-
+    @Override
     public boolean equals(Object obj)
     {
         return this.getId() == ((Student) obj).getId();
