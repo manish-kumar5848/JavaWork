@@ -44,7 +44,7 @@ public class MapDemo {
         System.out.println(map.entrySet());
         System.out.println(map.ceilingEntry(103));
         System.out.println(map.firstKey());
-        System.out.println(map.headMap(102));
+        System.out.println(map.headMap(102));//return key value pair which are less than key 102
 
 
     }
