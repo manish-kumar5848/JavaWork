@@ -1,0 +1,12 @@
+use employeeDatabase
+db.createCollection("Employee")
+db.Employee.insert({"_id":2548, Name:"Harshit",Dept_Id:12})
+db.Employee.insertMany([{"_id":2549, Name:"Awanish",Dept_Id:12},{"_id":2550, Name:"Piyush",Dept_Id:11},{"_id":29, Name:"Rahul",Dept_Id:11}])
+db.Employee.find({"_id":2548})
+db.Employee.find({"_id":{$gte:2549}})
+db.Employee.update({Name:"Rahul"},{$set:{Dept_Id:13}})
+db.Employee.find()
+db.Employee.remove({"_id":29})
+db.Employee.find({},{Name:1}) // Select only required field
+db.Employee.find().limit(2)
+db.Employee.find().sort({_id:-1})
